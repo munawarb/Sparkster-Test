@@ -49,3 +49,7 @@ add (a, b) {
 }
 
 }
+
+( function () {
+	window.customElements.define("my-component", MyComponent); // Auto-generated.
+})();
