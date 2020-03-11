@@ -1,7 +1,9 @@
-class ImCrazy extends HTMLElement {constructor() {
+class MyComponent extends HTMLElement {constructor() {
 super();
-this.add = this.add.bind(this);
+this.shadow = this.attachShadow({mode: "open"});
+this.doSomething = this.doSomething.bind(this);
 
+this.onClick = this.onClick.bind(this);
 
 }
 
@@ -424,28 +426,34 @@ this.add = this.add.bind(this);
 	}
 	static getSchema() {
 	return {
-	"add": {
-		"parameters": [
-			{
-				"name": "a",
-				"type": "int"
-			},
-			{
-				"name": "b",
-				"type": "int"
-			}
-		],
-		"code": "add (a, b) {\nreturn a+b;\n}"
+	"doSomething": {
+		"parameters": [],
+		"code": "doSomething () {\nconsole.log(\"Did something\");\n}"
 	}
 };
 }
 
-add (a, b) {
-return a+b;
+render() {
+	this.shadow.innerHTML = `<div>Sethu is awesome!</div>`;
+console.log("Called render");
+}
+
+connectedCallback() {
+this.addEventListener("click", this.onClick);
+this.render();
+
+window["call_spkfacade"](event.target.id, MyComponent,window.facadeService);
+}
+
+onClick() {
+window["call_spkfacade"](event.target.id, MyComponent,window.facadeService);
+}
+
+doSomething () {
+console.log("Did something");
 }
 
 }
-
-( function () {
-	window.customElements.define("my-component", ImCrazy); // Auto-generated.
+(function() {
+window.customElements.define("my-component", MyComponent); // Auto-generated.
 })();
