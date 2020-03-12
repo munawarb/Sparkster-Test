@@ -420,8 +420,8 @@ this.onClick = this.onClick.bind(this);
 		// If only the id is supplied, we want to return a value.
 		// The id defaults to this.
 		if (arguments.length < 2)
-			return target.style.html;
-		target.style.html = value;
+			return target.shadow.innerHTML;
+		target.shadow.innerHTML = value;
 	}
 	
 	static css(id, value) {
