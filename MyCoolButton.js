@@ -1,7 +1,6 @@
-class MyComponent extends HTMLElement {constructor() {
+class MyCoolButton extends HTMLElement {constructor() {
 super();
 this.shadow = this.attachShadow({mode: "open"});
-this.doSomething = this.doSomething.bind(this);
 
 this.onClick = this.onClick.bind(this);
 
@@ -238,6 +237,17 @@ this.onClick = this.onClick.bind(this);
 		target.style.height = value;
 	}
 	
+	static width(id, value) {
+		const target = (arguments.length === 0)?this: document.getElementById(id);
+		// We'll return the value of the property if no arguments have been passed in.
+		// This is a different case from supplying undefined explicitly in which case the value undefined will be set to the property value.
+		// If only the id is supplied, we want to return a value.
+		// The id defaults to this.
+		if (arguments.length < 2)
+			return target.style.width;
+		target.style.width = value;
+	}
+	
 	static zIndex(id, value) {
 		const target = (arguments.length === 0)?this: document.getElementById(id);
 		// We'll return the value of the property if no arguments have been passed in.
@@ -425,35 +435,25 @@ this.onClick = this.onClick.bind(this);
 		target.style.css = value;
 	}
 	static getSchema() {
-	return {
-	"doSomething": {
-		"parameters": [],
-		"code": "doSomething () {\nconsole.log(\"Did something\");\n}"
-	}
-};
+	return {};
 }
 
 render() {
-	this.shadow.innerHTML = `<div>Sethu is awesome!</div>`;
-console.log("Called render");
+	this.shadow.innerHTML = `<button>My Cool Button!</button>`;
 }
 
 connectedCallback() {
 this.addEventListener("click", this.onClick);
 this.render();
 
-window["call_spkfacade"](event.target.id, MyComponent,window.facadeService);
+window["call_spkfacade"](event.target.id, MyCoolButton,window.facadeService);
 }
 
 onClick() {
-window["call_spkfacade"](event.target.id, MyComponent,window.facadeService);
-}
-
-doSomething () {
-console.log("Did something");
+window["call_spkfacade"](event.target.id, MyCoolButton,window.facadeService);
 }
 
 }
 (function() {
-window.customElements.define("my-component", MyComponent); // Auto-generated.
+window.customElements.define("my-cool-button", MyCoolButton); // Auto-generated.
 })();
