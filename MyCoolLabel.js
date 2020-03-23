@@ -3,6 +3,7 @@ super();
 this.shadow = this.attachShadow({mode: "open"});
 
 this.onClick = this.onClick.bind(this);
+this.onDblClick = this.onDblClick.bind(this);
 
 }
 
@@ -332,7 +333,7 @@ this.onClick = this.onClick.bind(this);
 		// If only the id is supplied, we want to return a value.
 		// The id defaults to this.
 		if (arguments.length < 2)
-			return target.style.fontFamily;
+			return target.style.fontFamily || "Arial";
 		target.style.fontFamily = value;
 	}
 	
@@ -343,7 +344,7 @@ this.onClick = this.onClick.bind(this);
 		// If only the id is supplied, we want to return a value.
 		// The id defaults to this.
 		if (arguments.length < 2)
-			return target.style.letterSpacing;
+			return target.style.letterSpacing || "1px";
 		target.style.letterSpacing = value;
 	}
 	
@@ -354,7 +355,7 @@ this.onClick = this.onClick.bind(this);
 		// If only the id is supplied, we want to return a value.
 		// The id defaults to this.
 		if (arguments.length < 2)
-			return target.style.fontSize;
+			return target.style.fontSize || "12px";
 		target.style.fontSize = value;
 	}
 	
@@ -365,7 +366,7 @@ this.onClick = this.onClick.bind(this);
 		// If only the id is supplied, we want to return a value.
 		// The id defaults to this.
 		if (arguments.length < 2)
-			return target.style.fontStyle;
+			return target.style.fontStyle || "normal";
 		target.style.fontStyle = value;
 	}
 	
@@ -444,6 +445,7 @@ render() {
 
 connectedCallback() {
 this.addEventListener("click", this.onClick);
+this.addEventListener("dblclick", this.onDblClick);
 this.render();
 
 window["call_spkfacade"](event.target.id, MyCoolLabel,window.facadeService);
@@ -451,6 +453,10 @@ window["call_spkfacade"](event.target.id, MyCoolLabel,window.facadeService);
 
 onClick() {
 window["call_spkfacade"](event.target.id, MyCoolLabel,window.facadeService);
+}
+
+onDblClick() {
+	alert("I got double clicked");
 }
 
 }
