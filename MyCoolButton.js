@@ -431,7 +431,7 @@ this.onClick = this.onClick.bind(this);
 		// If only the id is supplied, we want to return a value.
 		// The id defaults to this.
 		if (arguments.length < 2)
-			return target.style;
+			return window.getComputedStyle(target);
 		target.style = value;
 	}
 	static getSchema() {
