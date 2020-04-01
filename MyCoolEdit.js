@@ -1,4 +1,4 @@
-!function(){"use strict";function t(){}function e(t){return t()}function n(){return Object.create(null)}function o(t){t.forEach(e)}function r(t){return"function"==typeof t}function c(t,e){return t!=t?e==e:t!==e||t&&"object"==typeof t||"function"==typeof t}function i(t,e,n){t.insertBefore(e,n||null)}function u(t){t.parentNode.removeChild(t)}function a(t){return document.createElement(t)}function l(t,e,n,o){return t.addEventListener(e,n,o),()=>t.removeEventListener(e,n,o)}function s(t,e){(null!=e||t.value)&&(t.value=e)}let f;function d(t){f=t}function h(t){(function(){if(!f)throw new Error("Function called outside component initialization");return f})().$$.on_mount.push(t)}const p=[],$=[],m=[],g=[],v=Promise.resolve();let y=!1;function b(t){m.push(t)}let w=!1;const _=new Set;function x(){if(!w){w=!0;do{for(let t=0;t<p.length;t+=1){const e=p[t];d(e),E(e.$$)}for(p.length=0;$.length;)$.pop()();for(let t=0;t<m.length;t+=1){const e=m[t];_.has(e)||(_.add(e),e())}m.length=0}while(p.length);for(;g.length;)g.pop()();y=!1,w=!1,_.clear()}}function E(t){if(null!==t.fragment){t.update(),o(t.before_update);const e=t.dirty;t.dirty=[-1],t.fragment&&t.fragment.p(t.ctx,e),t.after_update.forEach(b)}}const k=new Set;function C(t,e){-1===t.$$.dirty[0]&&(p.push(t),y||(y=!0,v.then(x)),t.$$.dirty.fill(0)),t.$$.dirty[e/31|0]|=1<<e%31}function S(c,i,a,l,s,h,p=[-1]){const $=f;d(c);const m=i.props||{},g=c.$$={fragment:null,ctx:null,props:h,update:t,not_equal:s,bound:n(),on_mount:[],on_destroy:[],before_update:[],after_update:[],context:new Map($?$.$$.context:[]),callbacks:n(),dirty:p};let v=!1;if(g.ctx=a?a(c,m,(t,e,...n)=>{const o=n.length?n[0]:e;return g.ctx&&s(g.ctx[t],g.ctx[t]=o)&&(g.bound[t]&&g.bound[t](o),v&&C(c,t)),e}):[],g.update(),v=!0,o(g.before_update),g.fragment=!!l&&l(g.ctx),i.target){if(i.hydrate){const t=function(t){return Array.from(t.childNodes)}(i.target);g.fragment&&g.fragment.l(t),t.forEach(u)}else g.fragment&&g.fragment.c();i.intro&&((y=c.$$.fragment)&&y.i&&(k.delete(y),y.i(w))),function(t,n,c){const{fragment:i,on_mount:u,on_destroy:a,after_update:l}=t.$$;i&&i.m(n,c),b(()=>{const n=u.map(e).filter(r);a?a.push(...n):o(n),t.$$.on_mount=[]}),l.forEach(b)}(c,i.target,i.anchor),x()}var y,w;d($)}let A;function M(e){let n,r,c;return{c(){var e,o,c;n=a("main"),r=a("input"),this.c=t,e=r,o="type",null==(c="text")?e.removeAttribute(o):e.getAttribute(o)!==c&&e.setAttribute(o,c)},m(t,u,a){i(t,n,u),function(t,e){t.appendChild(e)}(n,r),s(r,e[0]),e[5](n),a&&o(c),c=[l(r,"input",e[4]),l(n,"click",e[2]),l(n,"dblclick",L)]},p(t,[e]){1&e&&r.value!==t[0]&&s(r,t[0])},i:t,o:t,d(t){t&&u(n),e[5](null),o(c)}}}function L(t){alert("I got double clicked")}function N(t,e,n){let o,{value:r="hello!"}=e;function c(){return o.parentNode.host}return h(t=>{window.facadeService&&window.call_spkfacade(c().id,MyCoolEdit,window.facadeService)}),t.$set=t=>{"value"in t&&n(0,r=t.value)},[r,o,function(t){alert("I got clicked and my id is "+c().id),window.facadeService&&window.call_spkfacade(c().id,MyCoolEdit,window.facadeService)},c,function(){r=this.value,n(0,r)},function(t){$[t?"unshift":"push"](()=>{n(1,o=t)})}]}"function"==typeof HTMLElement&&(A=class extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}connectedCallback(){for(const t in this.$$.slotted)this.appendChild(this.$$.slotted[t])}attributeChangedCallback(t,e,n){this[t]=n}$destroy(){!function(t,e){const n=t.$$;null!==n.fragment&&(o(n.on_destroy),n.fragment&&n.fragment.d(e),n.on_destroy=n.fragment=null,n.ctx=[])}(this,1),this.$destroy=t}$on(t,e){const n=this.$$.callbacks[t]||(this.$$.callbacks[t]=[]);return n.push(e),()=>{const t=n.indexOf(e);-1!==t&&n.splice(t,1)}}$set(){}});customElements.define("my-cool-edit",class extends A{constructor(t){super(),S(this,{target:this.shadowRoot},N,M,c,{value:0}),t&&(t.target&&i(t.target,this,t.anchor),t.props&&(this.$set(t.props),x()))}static get observedAttributes(){return["value"]}get value(){return this.$$.ctx[0]}set value(t){this.$set({value:t}),x()}})}();
+!function(){"use strict";function t(){}function e(t,e){for(const n in e)t[n]=e[n];return t}function n(t){return t()}function o(){return Object.create(null)}function r(t){t.forEach(n)}function i(t){return"function"==typeof t}function c(t,e){return t!=t?e==e:t!==e||t&&"object"==typeof t||"function"==typeof t}function u(t,e,n){t.insertBefore(e,n||null)}function s(t){t.parentNode.removeChild(t)}function a(t){return document.createElement(t)}function l(t,e,n,o){return t.addEventListener(e,n,o),()=>t.removeEventListener(e,n,o)}function f(t,e,n){null==n?t.removeAttribute(e):t.getAttribute(e)!==n&&t.setAttribute(e,n)}function d(t,e){const n=Object.getOwnPropertyDescriptors(t.__proto__);for(const o in e)null==e[o]?t.removeAttribute(o):"style"===o?t.style.cssText=e[o]:"__value"===o||n[o]&&n[o].set?t[o]=e[o]:f(t,o,e[o])}let p;function h(t){p=t}function $(t){(function(){if(!p)throw new Error("Function called outside component initialization");return p})().$$.on_mount.push(t)}const g=[],m=[],y=[],v=[],b=Promise.resolve();let _=!1;function w(t){y.push(t)}let x=!1;const E=new Set;function k(){if(!x){x=!0;do{for(let t=0;t<g.length;t+=1){const e=g[t];h(e),C(e.$$)}for(g.length=0;m.length;)m.pop()();for(let t=0;t<y.length;t+=1){const e=y[t];E.has(e)||(E.add(e),e())}y.length=0}while(g.length);for(;v.length;)v.pop()();_=!1,x=!1,E.clear()}}function C(t){if(null!==t.fragment){t.update(),r(t.before_update);const e=t.dirty;t.dirty=[-1],t.fragment&&t.fragment.p(t.ctx,e),t.after_update.forEach(w)}}const S=new Set;function A(t,e){-1===t.$$.dirty[0]&&(g.push(t),_||(_=!0,b.then(k)),t.$$.dirty.fill(0)),t.$$.dirty[e/31|0]|=1<<e%31}function M(e,c,u,a,l,f,d=[-1]){const $=p;h(e);const g=c.props||{},m=e.$$={fragment:null,ctx:null,props:f,update:t,not_equal:l,bound:o(),on_mount:[],on_destroy:[],before_update:[],after_update:[],context:new Map($?$.$$.context:[]),callbacks:o(),dirty:d};let y=!1;if(m.ctx=u?u(e,g,(t,n,...o)=>{const r=o.length?o[0]:n;return m.ctx&&l(m.ctx[t],m.ctx[t]=r)&&(m.bound[t]&&m.bound[t](r),y&&A(e,t)),n}):[],m.update(),y=!0,r(m.before_update),m.fragment=!!a&&a(m.ctx),c.target){if(c.hydrate){const t=function(t){return Array.from(t.childNodes)}(c.target);m.fragment&&m.fragment.l(t),t.forEach(s)}else m.fragment&&m.fragment.c();c.intro&&((v=e.$$.fragment)&&v.i&&(S.delete(v),v.i(b))),function(t,e,o){const{fragment:c,on_mount:u,on_destroy:s,after_update:a}=t.$$;c&&c.m(e,o),w(()=>{const e=u.map(n).filter(i);s?s.push(...e):r(e),t.$$.on_mount=[]}),a.forEach(w)}(e,c.target,c.anchor),k()}var v,b;h($)}let L;function O(n){let o,i,c,f=[n[1]],p={};for(let t=0;t<f.length;t+=1)p=e(p,f[t]);return{c(){o=a("main"),i=a("input"),this.c=t,d(i,p)},m(t,e,s){u(t,o,e),function(t,e){t.appendChild(e)}(o,i),n[6](o),s&&r(c),c=[l(o,"click",n[2]),l(o,"dblclick",j)]},p(t,[e]){d(i,function(t,e){const n={},o={},r={$$scope:1};let i=t.length;for(;i--;){const c=t[i],u=e[i];if(u){for(const t in c)t in u||(o[t]=1);for(const t in u)r[t]||(n[t]=u[t],r[t]=1);t[i]=u}else for(const t in c)r[t]=1}for(const t in o)t in n||(n[t]=void 0);return n}(f,[2&e&&t[1]]))},i:t,o:t,d(t){t&&s(o),n[6](null),r(c)}}}function j(t){alert("I got double clicked")}function N(t,e,n){let o,r,{type:i="text"}=e,{value:c="My Cool Edit!"}=e;function u(){return o.parentNode.host}return $(t=>{window.facadeService&&window.call_spkfacade(u().id,MyCoolEdit,window.facadeService)}),t.$set=t=>{"type"in t&&n(3,i=t.type),"value"in t&&n(4,c=t.value)},t.$$.update=()=>{24&t.$$.dirty&&n(1,r={type:i,value:c})},[o,r,function(t){alert("I got clicked and my id is "+u().id),window.facadeService&&window.call_spkfacade(u().id,MyCoolEdit,window.facadeService)},i,c,u,function(t){m[t?"unshift":"push"](()=>{n(0,o=t)})}]}"function"==typeof HTMLElement&&(L=class extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}connectedCallback(){for(const t in this.$$.slotted)this.appendChild(this.$$.slotted[t])}attributeChangedCallback(t,e,n){this[t]=n}$destroy(){!function(t,e){const n=t.$$;null!==n.fragment&&(r(n.on_destroy),n.fragment&&n.fragment.d(e),n.on_destroy=n.fragment=null,n.ctx=[])}(this,1),this.$destroy=t}$on(t,e){const n=this.$$.callbacks[t]||(this.$$.callbacks[t]=[]);return n.push(e),()=>{const t=n.indexOf(e);-1!==t&&n.splice(t,1)}}$set(){}});customElements.define("my-cool-edit",class extends L{constructor(t){super(),M(this,{target:this.shadowRoot},N,O,c,{type:3,value:4}),t&&(t.target&&u(t.target,this,t.anchor),t.props&&(this.$set(t.props),k()))}static get observedAttributes(){return["type","value"]}get type(){return this.$$.ctx[3]}set type(t){this.$set({type:t}),k()}get value(){return this.$$.ctx[4]}set value(t){this.$set({value:t}),k()}})}();
 //# sourceMappingURL=bundle.js.map
 class MyCoolEdit {
 	
@@ -30,16 +30,16 @@ class MyCoolEdit {
 		const [id, value] = args;
 		const target = document.getElementById(id);
 		if (value === undefined)
-			return target.style.textColor;
-		target.style.textColor = value;
+			return target.style.color;
+		target.style.color = value;
 	}
 	
 	static linkColor(...args) {
 		const [id, value] = args;
 		const target = document.getElementById(id);
 		if (value === undefined)
-			return target.style.linkColor;
-		target.style.linkColor = value;
+			return target.style.color;
+		target.style.color = value;
 	}
 	
 	static opacity(...args) {
@@ -102,8 +102,8 @@ class MyCoolEdit {
 		const [id, value] = args;
 		const target = document.getElementById(id);
 		if (value === undefined)
-			return target.style.borderSize;
-		target.style.borderSize = value;
+			return target.style.borderWidths;
+		target.style.borderWidths = value;
 	}
 	
 	static borderStyle(...args) {
@@ -206,8 +206,8 @@ class MyCoolEdit {
 		const [id, value] = args;
 		const target = document.getElementById(id);
 		if (value === undefined)
-			return target.style.rows;
-		target.style.rows = value;
+			return target.style["grid-row"];
+		target.style["grid-row"] = value;
 	}
 	
 	static columns(...args) {
@@ -230,8 +230,8 @@ class MyCoolEdit {
 		const [id, value] = args;
 		const target = document.getElementById(id);
 		if (value === undefined)
-			return target.style.colGap;
-		target.style.colGap = value;
+			return target.style.columnGap;
+		target.style.columnGap = value;
 	}
 	
 	static fontFamily(...args) {
@@ -323,9 +323,28 @@ class MyCoolEdit {
 			"value": null,
 			"nodes": [
 				{
-					"name": "value",
-					"type": "string",
-					"value": "\"hello!\""
+					"name": "behavior",
+					"type": "",
+					"value": "",
+					"nodes": [
+						{
+							"name": "type",
+							"type": "string",
+							"value": "\"text\""
+						}
+					]
+				},
+				{
+					"name": "appearance",
+					"type": "",
+					"value": "",
+					"nodes": [
+						{
+							"name": "value",
+							"type": "string",
+							"value": "\"My Cool Edit!\""
+						}
+					]
 				}
 			]
 		}

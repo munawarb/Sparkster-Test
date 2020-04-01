@@ -1,4 +1,4 @@
-!function(){"use strict";function t(){}function n(t){return t()}function e(){return Object.create(null)}function o(t){t.forEach(n)}function c(t){return"function"==typeof t}function r(t,n){return t!=t?n==n:t!==n||t&&"object"==typeof t||"function"==typeof t}function i(t,n,e){t.insertBefore(n,e||null)}function a(t){t.parentNode.removeChild(t)}function l(t,n,e,o){return t.addEventListener(n,e,o),()=>t.removeEventListener(n,e,o)}let u;function f(t){u=t}function s(t){(function(){if(!u)throw new Error("Function called outside component initialization");return u})().$$.on_mount.push(t)}const d=[],h=[],p=[],m=[],$=Promise.resolve();let g=!1;function b(t){p.push(t)}let y=!1;const w=new Set;function _(){if(!y){y=!0;do{for(let t=0;t<d.length;t+=1){const n=d[t];f(n),x(n.$$)}for(d.length=0;h.length;)h.pop()();for(let t=0;t<p.length;t+=1){const n=p[t];w.has(n)||(w.add(n),n())}p.length=0}while(d.length);for(;m.length;)m.pop()();g=!1,y=!1,w.clear()}}function x(t){if(null!==t.fragment){t.update(),o(t.before_update);const n=t.dirty;t.dirty=[-1],t.fragment&&t.fragment.p(t.ctx,n),t.after_update.forEach(b)}}const k=new Set;function v(t,n){-1===t.$$.dirty[0]&&(d.push(t),g||(g=!0,$.then(_)),t.$$.dirty.fill(0)),t.$$.dirty[n/31|0]|=1<<n%31}function E(r,i,l,s,d,h,p=[-1]){const m=u;f(r);const $=i.props||{},g=r.$$={fragment:null,ctx:null,props:h,update:t,not_equal:d,bound:e(),on_mount:[],on_destroy:[],before_update:[],after_update:[],context:new Map(m?m.$$.context:[]),callbacks:e(),dirty:p};let y=!1;if(g.ctx=l?l(r,$,(t,n,...e)=>{const o=e.length?e[0]:n;return g.ctx&&d(g.ctx[t],g.ctx[t]=o)&&(g.bound[t]&&g.bound[t](o),y&&v(r,t)),n}):[],g.update(),y=!0,o(g.before_update),g.fragment=!!s&&s(g.ctx),i.target){if(i.hydrate){const t=function(t){return Array.from(t.childNodes)}(i.target);g.fragment&&g.fragment.l(t),t.forEach(a)}else g.fragment&&g.fragment.c();i.intro&&((w=r.$$.fragment)&&w.i&&(k.delete(w),w.i(x))),function(t,e,r){const{fragment:i,on_mount:a,on_destroy:l,after_update:u}=t.$$;i&&i.m(e,r),b(()=>{const e=a.map(n).filter(c);l?l.push(...e):o(e),t.$$.on_mount=[]}),u.forEach(b)}(r,i.target,i.anchor),_()}var w,x;f(m)}let L;function C(n){let e,c;return{c(){var n;n="main",e=document.createElement(n),e.innerHTML="<label>Label test</label>",this.c=t},m(t,r,a){i(t,e,r),n[3](e),a&&o(c),c=[l(e,"click",n[1]),l(e,"dblclick",S)]},p:t,i:t,o:t,d(t){t&&a(e),n[3](null),o(c)}}}function S(t){alert("I got double clicked")}function M(t,n,e){let o;function c(){return o.parentNode.host}return s(t=>{window.facadeService&&window.call_spkfacade(c().id,MyCoolLabel,window.facadeService)}),[o,function(t){alert("I got clicked and my id is "+c().id),window.facadeService&&window.call_spkfacade(c().id,MyCoolLabel,window.facadeService)},c,function(t){h[t?"unshift":"push"](()=>{e(0,o=t)})}]}"function"==typeof HTMLElement&&(L=class extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}connectedCallback(){for(const t in this.$$.slotted)this.appendChild(this.$$.slotted[t])}attributeChangedCallback(t,n,e){this[t]=e}$destroy(){!function(t,n){const e=t.$$;null!==e.fragment&&(o(e.on_destroy),e.fragment&&e.fragment.d(n),e.on_destroy=e.fragment=null,e.ctx=[])}(this,1),this.$destroy=t}$on(t,n){const e=this.$$.callbacks[t]||(this.$$.callbacks[t]=[]);return e.push(n),()=>{const t=e.indexOf(n);-1!==t&&e.splice(t,1)}}$set(){}});customElements.define("my-cool-label",class extends L{constructor(t){super(),E(this,{target:this.shadowRoot},M,C,r,{}),t&&t.target&&i(t.target,this,t.anchor)}})}();
+!function(){"use strict";function t(){}function e(t){return t()}function n(){return Object.create(null)}function o(t){t.forEach(e)}function r(t){return"function"==typeof t}function c(t,e){return t!=t?e==e:t!==e||t&&"object"==typeof t||"function"==typeof t}function i(t,e){t.appendChild(e)}function a(t,e,n){t.insertBefore(e,n||null)}function u(t){t.parentNode.removeChild(t)}function l(t){return document.createElement(t)}function s(t,e,n,o){return t.addEventListener(e,n,o),()=>t.removeEventListener(e,n,o)}let f;function d(t){f=t}function h(t){(function(){if(!f)throw new Error("Function called outside component initialization");return f})().$$.on_mount.push(t)}const p=[],$=[],m=[],g=[],x=Promise.resolve();let b=!1;function y(t){m.push(t)}let w=!1;const _=new Set;function v(){if(!w){w=!0;do{for(let t=0;t<p.length;t+=1){const e=p[t];d(e),k(e.$$)}for(p.length=0;$.length;)$.pop()();for(let t=0;t<m.length;t+=1){const e=m[t];_.has(e)||(_.add(e),e())}m.length=0}while(p.length);for(;g.length;)g.pop()();b=!1,w=!1,_.clear()}}function k(t){if(null!==t.fragment){t.update(),o(t.before_update);const e=t.dirty;t.dirty=[-1],t.fragment&&t.fragment.p(t.ctx,e),t.after_update.forEach(y)}}const E=new Set;function C(t,e){-1===t.$$.dirty[0]&&(p.push(t),b||(b=!0,x.then(v)),t.$$.dirty.fill(0)),t.$$.dirty[e/31|0]|=1<<e%31}function S(c,i,a,l,s,h,p=[-1]){const $=f;d(c);const m=i.props||{},g=c.$$={fragment:null,ctx:null,props:h,update:t,not_equal:s,bound:n(),on_mount:[],on_destroy:[],before_update:[],after_update:[],context:new Map($?$.$$.context:[]),callbacks:n(),dirty:p};let x=!1;if(g.ctx=a?a(c,m,(t,e,...n)=>{const o=n.length?n[0]:e;return g.ctx&&s(g.ctx[t],g.ctx[t]=o)&&(g.bound[t]&&g.bound[t](o),x&&C(c,t)),e}):[],g.update(),x=!0,o(g.before_update),g.fragment=!!l&&l(g.ctx),i.target){if(i.hydrate){const t=function(t){return Array.from(t.childNodes)}(i.target);g.fragment&&g.fragment.l(t),t.forEach(u)}else g.fragment&&g.fragment.c();i.intro&&((b=c.$$.fragment)&&b.i&&(E.delete(b),b.i(w))),function(t,n,c){const{fragment:i,on_mount:a,on_destroy:u,after_update:l}=t.$$;i&&i.m(n,c),y(()=>{const n=a.map(e).filter(r);u?u.push(...n):o(n),t.$$.on_mount=[]}),l.forEach(y)}(c,i.target,i.anchor),v()}var b,w;d($)}let L;function M(e){let n,r,c,f;return{c(){var o;n=l("main"),r=l("label"),o=e[0],c=document.createTextNode(o),this.c=t},m(t,u,l){a(t,n,u),i(n,r),i(r,c),e[5](n),l&&o(f),f=[s(n,"click",e[2]),s(n,"dblclick",N)]},p(t,[e]){1&e&&function(t,e){e=""+e,t.data!==e&&(t.data=e)}(c,t[0])},i:t,o:t,d(t){t&&u(n),e[5](null),o(f)}}}function N(t){alert("I got double clicked")}function T(t,e,n){let o,r,{text:c="test label"}=e;function i(){return o.parentNode.host}return h(t=>{window.facadeService&&window.call_spkfacade(i().id,MyCoolLabel,window.facadeService)}),t.$set=t=>{"text"in t&&n(0,c=t.text)},t.$$.update=()=>{1&t.$$.dirty&&(r={text:c})},[c,o,function(t){alert("I got clicked and my id is "+i().id),window.facadeService&&window.call_spkfacade(i().id,MyCoolLabel,window.facadeService)},r,i,function(t){$[t?"unshift":"push"](()=>{n(1,o=t)})}]}"function"==typeof HTMLElement&&(L=class extends HTMLElement{constructor(){super(),this.attachShadow({mode:"open"})}connectedCallback(){for(const t in this.$$.slotted)this.appendChild(this.$$.slotted[t])}attributeChangedCallback(t,e,n){this[t]=n}$destroy(){!function(t,e){const n=t.$$;null!==n.fragment&&(o(n.on_destroy),n.fragment&&n.fragment.d(e),n.on_destroy=n.fragment=null,n.ctx=[])}(this,1),this.$destroy=t}$on(t,e){const n=this.$$.callbacks[t]||(this.$$.callbacks[t]=[]);return n.push(e),()=>{const t=n.indexOf(e);-1!==t&&n.splice(t,1)}}$set(){}});customElements.define("my-cool-label",class extends L{constructor(t){super(),S(this,{target:this.shadowRoot},T,M,c,{text:0}),t&&(t.target&&a(t.target,this,t.anchor),t.props&&(this.$set(t.props),v()))}static get observedAttributes(){return["text"]}get text(){return this.$$.ctx[0]}set text(t){this.$set({text:t}),v()}})}();
 //# sourceMappingURL=bundle.js.map
 class MyCoolLabel {
 	
@@ -30,16 +30,16 @@ class MyCoolLabel {
 		const [id, value] = args;
 		const target = document.getElementById(id);
 		if (value === undefined)
-			return target.style.textColor;
-		target.style.textColor = value;
+			return target.style.color;
+		target.style.color = value;
 	}
 	
 	static linkColor(...args) {
 		const [id, value] = args;
 		const target = document.getElementById(id);
 		if (value === undefined)
-			return target.style.linkColor;
-		target.style.linkColor = value;
+			return target.style.color;
+		target.style.color = value;
 	}
 	
 	static opacity(...args) {
@@ -102,8 +102,8 @@ class MyCoolLabel {
 		const [id, value] = args;
 		const target = document.getElementById(id);
 		if (value === undefined)
-			return target.style.borderSize;
-		target.style.borderSize = value;
+			return target.style.borderWidths;
+		target.style.borderWidths = value;
 	}
 	
 	static borderStyle(...args) {
@@ -206,8 +206,8 @@ class MyCoolLabel {
 		const [id, value] = args;
 		const target = document.getElementById(id);
 		if (value === undefined)
-			return target.style.rows;
-		target.style.rows = value;
+			return target.style["grid-row"];
+		target.style["grid-row"] = value;
 	}
 	
 	static columns(...args) {
@@ -230,8 +230,8 @@ class MyCoolLabel {
 		const [id, value] = args;
 		const target = document.getElementById(id);
 		if (value === undefined)
-			return target.style.colGap;
-		target.style.colGap = value;
+			return target.style.columnGap;
+		target.style.columnGap = value;
 	}
 	
 	static fontFamily(...args) {
@@ -321,7 +321,13 @@ class MyCoolLabel {
 			"name": "tabs",
 			"type": null,
 			"value": null,
-			"nodes": []
+			"nodes": [
+				{
+					"name": "text",
+					"type": "string",
+					"value": "\"test label\""
+				}
+			]
 		}
 	]
 };
