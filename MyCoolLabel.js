@@ -318,16 +318,18 @@ class MyCoolLabel {
 	"functions": {},
 	"properties": [
 		{
-			"name": "tabs",
-			"type": null,
-			"value": null,
-			"nodes": [
-				{
-					"name": "text",
-					"type": "string",
-					"value": "\"test label\""
+			name": "text",
+			"label": "Text",
+			"templateType": "textTemplate",
+			"collections": [],
+			"icon": "",
+			"value": "Default label text",
+			"templateOptions": {
+				"dimension": {
+					"width": "50%",
+					"height": "auto"
 				}
-			]
+			}
 		}
 	]
 };
