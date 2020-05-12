@@ -318,7 +318,7 @@ class MyCoolLabel {
 	"functions": {},
 	"properties": [
 		{
-			name": "text",
+			"name": "text",
 			"label": "Text",
 			"templateType": "textTemplate",
 			"collections": [],
